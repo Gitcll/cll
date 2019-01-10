@@ -1,0 +1,218 @@
+package com.chinasoft.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
+
+import com.chinasoft.dao.IPatientDao;
+import com.chinasoft.entity.Patient;
+import com.chinasoft.util.DBUtil;
+
+public class PatientDaoImpl implements IPatientDao{
+
+	Connection conn = DBUtil.getConnection();
+	PreparedStatement pstmt = null;
+	ResultSet rs = null;
+	@Override
+	public List<Patient> queryPatientByPage(int currentPage, int pageSize) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResultSet queryAllPatient() {
+		String sql = "select p_id,username,sex,age,addr,iphone,zhuyuan,g_id,c_id from patient";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			return pstmt.executeQuery();	
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	@Override
+	public Patient queryUSerById(int pid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public boolean addUser(Patient p) {
+		try {
+			pstmt = conn.prepareStatement("insert into patient(username,sex,age,addr,iphone) values(?,?,?,?,?)");
+			pstmt.setString(1, p.getPatientName());
+			pstmt.setString(2, p.getPatientSex());
+			pstmt.setInt(3, p.getPatientAge());
+			pstmt.setString(4, p.getPatientAdd());
+			pstmt.setString(5, p.getPatientPhoneNum());
+			int update = pstmt.executeUpdate();
+			if(update <= 0){
+				return false;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return true;
+	}
+
+	@Override
+	public boolean delPatientByPid(Patient p) {
+		try {
+			pstmt = conn.prepareStatement("delete from patient where p_id=?");
+			pstmt.setInt(1, p.getPid());
+			int update = pstmt.executeUpdate();
+			if(update <=0){
+				return false;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return true;
+	}
+
+	@Override
+	public boolean updatePatientByPid(Patient p) {
+		try {
+			pstmt = conn.prepareStatement("update patient set username=?,sex=?,age=?,addr=?,"
+					+ "iphone=?,zhuyuan=? where p_id=?");
+			pstmt.setString(1, p.getPatientName());
+			pstmt.setString(2, p.getPatientSex());
+			pstmt.setInt(3, p.getPatientAge());
+			pstmt.setString(4, p.getPatientAdd());
+			pstmt.setString(5, p.getPatientPhoneNum());
+			pstmt.setString(6, p.getZhuyuan());
+
+			pstmt.setInt(7, p.getPid());
+			int update = pstmt.executeUpdate();
+			if(update <= 0){
+				return false;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return true;
+	}
+
+	@Override
+	public boolean isExistBypid(int pid) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	//分页查询
+	@Override
+	public ResultSet find(int start, int end) {
+		try {
+			pstmt = conn.prepareStatement("select p_id,username,sex,age,addr,iphone,zhuyuan,g_id,c_id from patient u limit "+start+","+end);
+			return pstmt.executeQuery();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	//总行数
+	@Override
+	public ResultSet findCount() {
+		try {
+			pstmt = conn.prepareStatement("select count(1) co from patient" );
+			return pstmt.executeQuery();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	
+	public boolean queryByPatientNameAndPatientPwd(Patient patient) {
+		
+		try {
+			String sql = "select * from patient where userlogin = ? and  userpwd = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, patient.getpLoginName());
+			pstmt.setString(2,patient.getpLoginPwd());
+			ResultSet rs = pstmt.executeQuery();
+			if(rs.next())
+			{
+			return true;	
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	@Override
+	public List<Patient> queryPatientById(Patient p) {
+		List<Patient> list = new ArrayList<Patient>();
+		
+		try {
+			String sql = "select p_id,username,sex,age,addr,iphone,zhuyuan,g_id,c_id from patient where p_id=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, p.getPid());
+			rs = pstmt.executeQuery();
+			while(rs.next()){
+				list.add(new Patient(rs.getInt(1),rs.getString(2), rs.getString(3), 
+						rs.getInt(4),rs.getString(5), rs.getString(6), rs.getString(7),rs.getInt(8),rs.getInt(9)));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
+
+
+
+
+	public boolean queryByPatientNameAndPatientPwd(String username,
+			String userpwd) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+
+
+	public boolean registerUser(Patient p){
+		
+		try {
+			String sql = "insert into patient(username,userlogin,userpwd,sex) values(?,?,?,?)";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, p.getPatientName());
+			pstmt.setString(2, p.getpLoginName());
+			pstmt.setString(3, p.getpLoginPwd());
+			pstmt.setString(4, p.getPatientSex());
+			int r = pstmt.executeUpdate();
+			if(r <0){
+				return false;
+			}
+
+			}
+		 catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return true;
+	}
+	
+
+
+
+}
+

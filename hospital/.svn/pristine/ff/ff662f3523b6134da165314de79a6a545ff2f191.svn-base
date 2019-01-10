@@ -1,0 +1,52 @@
+package com.chinasoft.entity;
+
+import java.sql.Date;
+
+
+
+public class ChuFang {
+	private int c_id;//处方号
+	private String chu_date;//开方日期
+	private String diagnosis;//诊断结果
+	private String content;//药品名称
+	public ChuFang() {
+		super();
+	}
+	public ChuFang(int c_id, String chu_date, String diagnosis, String content) {
+		super();
+		this.c_id = c_id;
+		this.chu_date = chu_date;
+		this.diagnosis = diagnosis;
+		this.content = content;
+	}
+	public int getC_id() {
+		return c_id;
+	}
+	public void setC_id(int c_id) {
+		this.c_id = c_id;
+	}
+	public String getChu_date() {
+		return chu_date;
+	}
+	public void setChu_date(String chu_date) {
+		this.chu_date = chu_date;
+	}
+	public String getDiagnosis() {
+		return diagnosis;
+	}
+	public void setDiagnosis(String diagnosis) {
+		this.diagnosis = diagnosis;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	@Override
+	public String toString() {
+		return "ChuFang [c_id=" + c_id + ", chu_date=" + chu_date
+				+ ", diagnosis=" + diagnosis + ", content=" + content + "]";
+	}
+	
+}

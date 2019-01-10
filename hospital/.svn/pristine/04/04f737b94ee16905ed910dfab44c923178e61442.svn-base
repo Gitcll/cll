@@ -1,0 +1,126 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib     uri="http://java.sun.com/jsp/jstl/core"   prefix="c" %>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'index.jsp' starting page</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+	<script type="text/javascript" src="js/jquery-1.11.0.js" charset="utf-8"></script>
+	
+	<script type="text/javascript">
+	   $(function(){
+		   $("tr:even").css("width","100px");
+		   $("tr:even").css("height","40px");
+		   $("tr:even").css("background","#eee");
+		   
+		   $("tr:odd").css("width","100px");
+		   $("tr:odd").css("height","40px");
+		   $("tr:odd").css("background","#ccc");
+		   
+		  
+		   
+		   $("#pageSize").change(function(){
+			   
+			   var pagesize = $(this).val();
+			   
+			   location.href="find?everyPage="+pagesize +"&page=1";
+			   
+		   });
+		   
+	   });
+	
+	
+	</script>
+  </head>
+  
+  <body>
+    <h1>用户信息显示</h1>
+    <table>
+       <tr>
+       <td>e_id</td>
+       <td>username</td> 
+       <td>userlogin</td>
+        <td>userpwd</td> 
+        <td>hiredate</td> 
+       <td>sex</td> 
+       <td>age</td>
+       <td>education</td>
+        <td>addr</td>
+        <td>iphone</td> 
+        <td>d_id</td>
+         <td>q_id</td>
+          <td>usertype</td>
+          <td>pos</td> 
+       </tr>
+     <c:forEach var ="li" items="${list}">
+       <tr>
+       <td>${li.e_id}</td>
+       <td>${li.username}</td>
+       <td>${li.userlogin}</td>
+       <td>${li.userpwd}</td>
+       <td>${li.hiredate}</td>
+       <td>${li.sex}</td>
+       <td>${li.age}</td>
+       <td>${li.education}</td>
+       <td>${li.addr}</td>
+       <td>${li.iphone}</td>
+       <td>${li.d_id}</td>
+       <td>${li.q_id}</td>
+       <td>${li.usertype}</td>
+       <td>${li.pos}</td>
+       
+       </tr>
+     
+     </c:forEach>  
+    <tr>
+     <td colspan="16">
+       <c:if test="${page==1}">
+       <a>首页</a>
+       <a>上一页</a>
+       </c:if>
+       <c:if test="${page!=1}">
+       <a href="find?page=1">首页</a>
+       <a href="find?page=${requestScope.page-1}">上一页</a>
+       </c:if>
+       <c:forEach var ="everyPage" begin="1" end="${requestScope.pageCount}"> 
+          <a href="find?page=${everyPage}">${everyPage}</a>
+         </c:forEach>
+         
+         <c:if test="${page==pageCount}">
+       <a>下一页</a>
+       <a>尾页</a>
+       </c:if>  
+       
+       <c:if test="${page !=requestScope.pageCount}">
+       <a href="find?page=${requestScope.page+1}">下一页</a>
+       <a href="find?page=${requestScope.pageCount}">尾页</a>
+       </c:if>
+     </td>
+    </tr>
+    
+    </table>
+    <p>当前第${page}页/总共${requestScope.pageCount}</p>
+    每页显示几条数据<select id="pageSize">
+   	 <option selected="selected">请选择页码</option>
+       <option value ="1" id="s3">1</option>
+        <option value ="2" id="s4">2</option>
+         <option value ="3" id="s5">3</option>
+          <option value ="4" id="s6">4</option>
+          
+    </select>
+  </body>
+</html>

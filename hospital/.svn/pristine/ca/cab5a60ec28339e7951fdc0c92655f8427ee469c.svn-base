@@ -1,0 +1,137 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta charset = "UTF-8" >
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/login_style.css"/>
+		<link rel="icon" href="img/favicon.ico" type="img/favicon.ico" />
+		<link rel="shortcut icon" href="client/img/favicon.ico" type="img/favicon.ico" />
+		<script type="text/javascript" src="js/login.js"></script>
+		<script type="text/javascript" >
+		
+		function rand(){
+			var time = new Date().getTime();
+			var img = document.getElementById("img");
+			img.src = "/hospital/yanzhengmaServlet?time"+time;
+		}
+		</script>
+	</head>
+	<body>
+
+<div class="centent">
+	<div class="login_logo">
+	
+	<!--<span>注册</span>-->
+	</div>
+	<div class="container">
+		<ul>
+			<li>
+				<span>账号登录</span>
+				<!--<em><a href="#">x</a></em>-->
+			</li>
+			<li>
+				<strong class="account">关于中软医院将实行<a href="http://127.0.0.1:8020/%E7%A9%B7%E6%B8%B8/index.html?__hbt=1538281650819">手机绑定实名制说明</a></strong>
+			</li>
+			<li>
+				<form action="/hospital/PatientloginServlet" method="post">
+					<input type="text" name="userlogin" class="text_user text" placeholder="手机号/邮箱/用户名" value="" /><br />
+					<input type="password" name="userpwd" class="text_pass text" placeholder="密码" value="" /><br />
+					<input type="text" name="yanzhengma" class=" text_pass text" style="width:160px"  placeholder="验证码" value="" style=""/>
+					<img id="img" src = "/hospital/yanzhengmaServlet"  style="margin-top:12px"><a href="javascript:rand();">看不清</a><br>
+					<input type="submit" name="" class="btn2" value="登录" /><br />
+				</form>
+			</li>
+			<li>
+					<em class="qq"><a href="#">QQ</a></em>
+					<em class="sina"><a href="#">新浪微博</a></em>
+					<em class="WeChat"><a href="weixin_login.html">微信</a></em>
+			</li>
+			<li>
+				<strong class="account">没有账号?<a href="patientregister.jsp">&nbsp;立即注册</a></strong>
+				<strong class="disclaimer"><a href="login.jsp">境外手机号码登录</a></strong>
+				
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+
+<div id="footer">
+			<div class="footer_contact">
+				<ul>
+					<strong>|&nbsp;&nbsp;<span>关于我们</span></strong>
+					<li>
+						<a href="#">医院简介</a>
+					</li>
+					<li>
+						<a href="#">联系我们</a>
+					</li>
+					<li>
+						<a href="#">招聘职位</a>
+					</li>
+				</ul>
+				<ul>
+					<strong>|&nbsp;&nbsp;<span>合作伙伴</span></strong>
+					<li>
+						<a href="#">西京医院</a>
+					</li>
+					<li>
+						<a href="#">西安交大附属二院</a>
+					</li>
+					<li>
+						<a href="#">第四医院</a>
+					</li>
+					<li>
+						<a href="#">唐都医院</a>
+					</li>
+				</ul>
+				<ul>
+					<strong>|&nbsp;&nbsp;<span>网站条款</span></strong>
+					<li>
+						<a href="#">会员条款</a>
+					</li>
+					<li>
+						<a href="#">社区指南</a>
+					</li>
+					<li>
+						<a href="#">版权声明</a>
+					</li>
+					<li>
+						<a href="#">免责声明</a>
+					</li>
+				</ul>
+				<ul>
+					<strong>|&nbsp;&nbsp;<span>帮助中心</span></strong>
+					<li>
+						<a href="#">使用帮助</a>
+					</li>
+					<li>
+						<a href="#">网站地图</a>
+					</li>
+					<li>
+						<a href="#">就医指南</a>
+					</li>
+				</ul>
+				<div class="footer_statement">
+					<a href="index.html"><img src="img/logo/footer.png"/></a>
+					<p>2004-2018 © 北大医院® beida.com All rights reserved. Version v5.57
+						<a href="#"> 京ICP备12003524号</a> 京公网安备11010102001935  京ICP证140673号 
+						<a href="#">营业执照 </a>
+						<a href="#"> 经营许可证 </a>
+						<br />
+						<a href="#">我院</a>为<a href="#">患者</a>提供就医平台<a href="#">就医指南</a><a href="#">护工服务</a>和<a href="#">一站式缴费</a>、<a href="#">便民服务台</a>和<a href="#">问答</a>交流平台，并提供<a href="#">医保</a>、
+						<a href="#">社保</a>、<a href="#">农村合作医疗</a>、<a href="#">城镇医保卡</a>等。
+					</p>		
+				</div>		
+			</div>
+		</div>
+	
+	</body>
+</html>

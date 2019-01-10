@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>hospital</display-name>
+
+  <servlet>
+  	<servlet-name>PatientFindAllServlet</servlet-name>
+  	<servlet-class>com.chinasoft.servlet.manager.PatientFindAllServlet</servlet-class>
+  </servlet>
+   <servlet>
+  	<servlet-name>PatientAddServlet</servlet-name>
+  	<servlet-class>com.chinasoft.servlet.manager.PatientAddServlet</servlet-class>
+  </servlet>
+   <servlet>
+  	<servlet-name>PatientDeleteServlet</servlet-name>
+  	<servlet-class>com.chinasoft.servlet.manager.PatientDeleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PatientUpdateServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.PatientUpdateServlet</servlet-class>
+  </servlet>
+
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddGuahaoServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.AddGuahaoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MainGuahaoServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.MainGuahaoServlet</servlet-class>
+  </servlet>
+
+
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Emp_AddServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.Emp_AddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Emp_FindAllServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.Emp_FindAllServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.DeleteServlet</servlet-class>
+  </servlet>
+  
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindAllMedicineServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.FindAllMedicineServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddMedicineServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.AddMedicineServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteMedicineServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.DeleteMedicineServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PageMedicineServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.PageMedicineServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Emp_DeleteServlet1</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.Emp_DeleteServlet1</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+  	<servlet-name>PatientFindAllServlet</servlet-name>
+  	<url-pattern>/findAllPatient</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PatientAddServlet</servlet-name>
+  	<url-pattern>/AddPatientServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+  	<servlet-name>PatientDeleteServlet</servlet-name>
+  	<url-pattern>/DeletePatientServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PatientUpdateServlet</servlet-name>
+    <url-pattern>/PatientUpdateServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AddGuahaoServlet</servlet-name>
+    <url-pattern>/addGuahao</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MainGuahaoServlet</servlet-name>
+    <url-pattern>/mainGuahao</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Emp_AddServlet</servlet-name>
+    <url-pattern>/Emp_AddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Emp_FindAllServlet</servlet-name>
+    <url-pattern>/FindAll</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteServlet</servlet-name>
+    <url-pattern>/DeleteServlet</url-pattern>
+  </servlet-mapping>
+  
+
+   <servlet-mapping>
+    <servlet-name>FindAllMedicineServlet</servlet-name>
+    <url-pattern>/FindAllMedicine</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddMedicineServlet</servlet-name>
+    <url-pattern>/AddMedicine</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteMedicineServlet</servlet-name>
+    <url-pattern>/DeleteMedicine</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageMedicineServlet</servlet-name>
+    <url-pattern>/PageMedicineServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Emp_DeleteServlet1</servlet-name>
+    <url-pattern>/DeletePatientServlet1</url-pattern>
+  </servlet-mapping>
+
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpLoad</servlet-name>
+    <servlet-class>com.chinasoft.upload.UpLoad</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Emp_loginServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.Emp_loginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Emp_UpLoad</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.Emp_UpLoad</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PatientloginServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.client.PatientloginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yanzhengmaServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.client.yanzhengmaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PatientRegisterServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.client.PatientRegisterServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+
+    <servlet-name>DelGuahoServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.DelGuahoServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+
+    <servlet-name>Emp_RegisteredServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.Emp_RegisteredServlet</servlet-class>
+  </servlet>
+
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+
+    <servlet-name>PateintFindById</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.PateintFindById</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PatientFenYe</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.PatientFenYe</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindMedicineById</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.FindMedicineById</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdataMedicineServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.UpdataMedicineServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Emp_UpdateServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.Emp_UpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PageGuahaoServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.PageGuahaoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MainGuahao01Servlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.manager.MainGuahao01Servlet</servlet-class>
+  </servlet>
+
+
+
+  <servlet-mapping>
+    <servlet-name>UpLoad</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Emp_loginServlet</servlet-name>
+    <url-pattern>/Emp_loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Emp_UpLoad</servlet-name>
+    <url-pattern>/Emp_UpLoad</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PatientloginServlet</servlet-name>
+    <url-pattern>/PatientloginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yanzhengmaServlet</servlet-name>
+    <url-pattern>/yanzhengmaServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PatientRegisterServlet</servlet-name>
+    <url-pattern>/PatientRegisterServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+
+    <servlet-name>DelGuahoServlet</servlet-name>
+    <url-pattern>/delGuahao</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+
+    <servlet-name>Emp_RegisteredServlet</servlet-name>
+    <url-pattern>/Emp_RegisteredServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+
+    <servlet-name>PateintFindById</servlet-name>
+    <url-pattern>/PateintFindById</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PatientFenYe</servlet-name>
+    <url-pattern>/fen</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>FindMedicineById</servlet-name>
+    <url-pattern>/FindMedicineById</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdataMedicineServlet</servlet-name>
+    <url-pattern>/UpdataMedicine</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet-mapping>
+    <servlet-name>Emp_UpdateServlet</servlet-name>
+    <url-pattern>/Emp_UpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageGuahaoServlet</servlet-name>
+    <url-pattern>/pageGuahao</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MainGuahao01Servlet</servlet-name>
+    <url-pattern>/mainGuahao01</url-pattern>
+  </servlet-mapping>
+
+
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

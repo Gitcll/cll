@@ -1,0 +1,165 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'index.jsp' starting page</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+ 	<script type="text/javascript" src="js/jquery-1.11.0.js" charset="utf-8"></script>
+	
+	<script type="text/javascript">
+		function find(url){
+			
+			document.getElementById("name").value="";
+			document.getElementById("sex").value="";
+			document.getElementById("age").value="";
+			document.getElementById("addr").value="";
+			document.getElementById("phonenum").value="";
+			//alert("更新成功");
+			$.ajax({
+				type:"post",
+				url:url,
+				datatype:"json",
+				//async:true,
+				success:function(data){
+					data = eval("("+data+")");
+					
+					var html="";
+					var id = "";
+					//删除表格第一行的内容
+					$("table tr:not(:first)").remove();
+					for(var i = 0; i < data.length;i++){
+						html += "<tr id="+i+">";
+						$.each(data[i],function(j,val){
+							html+="<td>"+val+"</td>";
+							if(j == "pid"){
+								id += val;
+							}
+							if(j == "chufagnId"){
+								
+								html += "<td><a href='javascript:void(0)' onclick=del('DeleteServlet?id="+id+"')>删除</a></td>";
+								html += "<td><a href='javascript:void(0)' onclick=update('UpdateServlet?id="+id+"')>更新</a></td>";
+							}
+						});
+						html+="</tr>";
+						id = "";
+					}
+					$('#first').after(function(){
+						return html;
+					});
+				}
+			});
+		}
+	
+		$(function(){
+			$("#first").css("background","pink");
+			$("h1").css("background","skyblue");
+		});
+		
+		function addUser(url){
+			var name = document.getElementById("name").value;
+			var sex = document.getElementById("sex").value;
+			var age = document.getElementById("age").value;
+			var addr = document.getElementById("addr").value;
+			var phonenum = document.getElementById("phonenum").value;
+			
+			$.ajax({
+				type:"post",
+				async:false,
+				url:url,
+				data:{
+					"name":name,
+					"sex":sex,
+					"age":age,
+					"addr":addr,
+					"phonenum":phonenum
+					},
+				datatype:"json",
+				success:function(data){	
+				$("p").html(data);
+				}
+			});
+			find("findAllPatient");
+			
+		}
+		
+		function del(ths){
+			var nid;
+			$.ajax({
+				type:"post",
+				async:false,
+				data:{
+					"nid":ths
+				},
+				url:"DeletePatientServlet",
+				datatype:"json",
+				success:function(data){
+					
+					$("p").html(data);
+				}
+			});
+			
+			find("findAllPatient");
+		}
+	</script>
+  </head>
+  
+  <body onload="find('findAllPatient')">
+  <input type="text" id="pid" hidden="hidden">
+    用户名:<input type="text" id="name" >
+    性&nbsp;别:<input type="text" id="sex" >
+    年&nbsp;龄:<input type="text" id="age" >
+    地&nbsp;址:<input type="text" id="addr" >
+    手机号:<input type="text" id="phonenum" ><br>
+    <input type="button" value="新增" onclick="addUser('AddPatientServlet')">
+    <input type="button" value="更新" onclick="updateUser()">
+    <p></p>
+    <h1>患者信息管理</h1>
+    <table cellspacing="0px" border="1px" cellpadding="7px">
+    <tr id="first">
+    	<td>ID</td>
+    	<td>用户名</td>
+    	<td>性别</td>
+    	<td>年龄</td>
+    	<td>地址</td>
+    	<td>手机号</td>
+    	<td>住院</td>
+    	<td>挂号号码</td>
+    	<td>处方号</td>
+    	<td>增加</td>
+    	<td>删除</td>
+    </tr>
+    </table>
+    <div id="pupdate">
+    	<div id="pupdate1">
+    	<form action="PatientUpdateServlet" method="post">
+    		用户名:<input type="text" id="fname">
+     		性&nbsp;别:<input type="text" id="fsex" ><br>
+    		年&nbsp;龄:<input type="text" id="fage" ><br>
+    		地&nbsp;址:<input type="text" id="faddr" ><br>
+    		手机号:<input type="text" id="fphonenum" ><br>
+    		住&nbsp;院: <input type="text" id="fzhuyuan"><br>
+    		挂号码: <input type="text" id="fguahaoid"><br>
+    		处方号: <input type="text" id="fguahaoid"><br>
+    		<input type="submit" value="确定修改">
+    		<input type="button" value="返回">
+    	</form>
+    	</div>
+    </div>
+    <div id="cover"></div>
+  </body>
+</html>
+

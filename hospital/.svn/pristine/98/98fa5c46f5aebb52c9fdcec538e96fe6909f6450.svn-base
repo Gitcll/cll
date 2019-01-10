@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="icon" href="img/logo/logo64.ico""/>
+	
+		
+		<script src="js/jquery-1.11.0.js"></script>
+		
+		 <script type="text/javascript">
+ 	
+		 	window.onload = function (){
+		 		var oBg = document.getElementsByClassName('head_bg1')[0];
+		 		var oConBg = document.getElementsByClassName('contert_bg')[0];
+		 		var arr = ['img/head/img1.jpg','img/head/img2.png','img/head/img3.png','img/head/img4.jpg','img/head/img5.jpg'];
+				var arr1 = ['img/contert/left_1.jpg','img/contert/left_2.png','img/contert/left_3.jpg'];
+				var i = 0;
+				
+			setInterval(hello,1000);
+			
+			
+				function hello(){
+					i++;	
+					if(i>=arr.length){
+						i=0;
+						};
+					oBg.src = arr[i];
+				}	
+				
+				setInterval(hi,1000);
+				function hi(){
+					i++;	
+					if(i>=arr1.length){
+						i=0;
+						};
+					oConBg.src = arr1[i];
+				}	
+			
+		 	}
+		 </script>
+		
+	</head>
+	<body>
+		<!--头部-->
+		<div class="head">
+			<!--头部logo部分-->
+			<div class="head_top clear">
+				<h1><img src="img/logo/logo.jpg"/></h1>
+				<!--头部logo搜索 -->
+				<div class="head_top_search">
+					<form action="#" method="post">
+						<input type="text" class="text" />
+						<input type="button" class="btn" value="搜索"/>
+					</form>
+					<span>热门搜索:</span>
+					<a href="#">中医</a>
+					<a href="#">演讲比赛</a>
+					<a href="#">领军</a>
+				</div>
+			</div>
+			<!--头部导航栏-->
+				<div class="header_nav clear">
+					<ul class="nav_F">
+						<li><a href="#">医院首页</a></li>
+						<li><a href="#">医院概括</a>
+							<ul>
+								<li><a href="#">医院介绍</a></li>
+								<li><a href="#">组织架构</a></li>
+								<li><a href="#">医院布局</a></li>
+								<li><a href="#">交通指引</a></li>
+								<li><a href="#">荣誉资质</a></li>
+							</ul>
+						</li>
+						<li><a href="#">新闻公告</a>
+							<ul>
+								<li><a href="#">医院新闻</a></li>
+								<li><a href="#">媒体报道</a></li>
+								<li><a href="#">最新公告</a></li>
+								<li><a href="#">视频报道</a></li>
+							</ul>
+						</li>
+						<li><a href="#">就医指南</a>
+							<ul>
+								<li><a href="#">就医须知</a></li>
+								<li><a href="#">出诊时间</a></li>
+								<li><a href="#">就医流程</a></li>
+								<li><a href="#">义诊讲座</a></li>
+							</ul>
+						</li>
+						<li><a href="#">科室特色</a>
+							<ul>
+								<li><a href="#">骨科</a></li>
+								<li><a href="#">外科</a></li>
+								<li><a href="#">内科</a></li>
+								<li><a href="#">专科</a></li>
+								<li><a href="#">辅诊科室</a></li>
+							</ul>
+						</li>
+						<li><a href="#">科研教学</a>
+							<ul>
+								<li><a href="#">科学研究</a></li>
+								<li><a href="#">研究生教育</a></li>
+								<li><a href="#">继续教育</a></li>
+								<li><a href="#">规范化培训</a></li>
+								
+							</ul>
+						</li>
+						<li><a href="#">党群人事</a>
+							<ul>
+								<li><a href="#">人事信息</a></li>
+								<li><a href="#">招聘公告</a></li>
+								<li><a href="#">党团活动</a></li>
+							</ul>
+						</li>
+						<li><a href="#">护理园地</a>
+							<ul>
+								<li><a href="#">优质护理</a></li>
+								<li><a href="#">专科护理</a></li>
+								<li><a href="#">护理教育</a></li>
+							</ul>
+						</li>
+						<li><a href="#">医院文化</a>
+							<ul>
+								<li><a href="#">院训</a></li>
+								<li><a href="#">服务宗旨</a></li>
+								<li><a href="#">办院理念</a></li>
+								<li><a href="#">医院精神</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			<!--头部图片-->
+			<div class="head_img clear">
+				<a href="#"><img src="img/head/img1.jpg" class="head_bg1"/></a>
+				<ul class="">
+					<li><a href="javascript:;"></a></li>
+					<li><a href="javascript:;"></a></li>
+					<li><a href="javascript:;"></a></li>
+					<li><a href="javascript:;"></a></li>
+				</ul>
+			</div>
+		</div>
+		<!--内容-->
+		<div class="contert">
+			<div class="contert_top">
+				<ul class="contert_ul">
+					<a href="reserve.html">
+					<li>
+						<img src="img/contert/reserve.png"/>
+						<span>预约挂号</span>
+					</li>
+					
+					<a href="#">
+					<li>
+						<img src="img/contert/Medical.png"/>
+						<span>医疗特色</span>
+					</li>
+					</a>
+					<a href="#">
+					<li>
+						<img src="img/contert/guide.png"/>
+						<span>就医指南</span>
+					</li>
+					</a>
+					<a href="query.html">
+					<li>
+						<img src="img/contert/Online.png"/>
+						<span>在线查询</span>
+					</li>
+					</a>
+					<a href="#">
+					<li>
+						<img src="img/contert/Medical insurance.png"/>
+						<span>医保服务</span>
+					</li>
+					</a>
+					<a href="#">
+					<li>
+						<img src="img/contert/void.png"/>
+						<span>健康视频</span>
+					</li>
+					</a>
+				</ul>
+			</div>
+			<div class="contert_center clear">
+				<div class="center_left">
+					<img class="contert_bg" src="img/contert/left_1.jpg"/>
+					<span>南医三院第一次团代会胜利召开</span>
+					<ul>
+						<li><a href="javascript:;"></a></li>
+						<li><a href="javascript:;"></a></li>
+						<li><a href="javascript:;"></a></li>
+						
+					</ul>
+				</div>
+					<div class="center_news center_news1">
+						<span>医院新闻</span>
+						<a class="more" href="#">更多</a>
+						<ul>
+							<li><a href="#">南医三院第一次团代会胜利召开</a></li>
+							<li><a href="#">南医三院援加纳医疗队员凯旋</a></li>
+							<li><a href="#">南医三院荣获基层服务能力帮扶优秀案例奖</a></li>
+							<li><a href="#">心血管内科梁燕琼荣获医药卫生界“平凡英雄</a></li>
+							<li><a href="#">改革不停顿，开放不止步</a></li>
+							<li><a href="#">南医三院举办广东省泌尿生殖协会前列腺疾病</a></li>
+							<li><a href="#">南医三院内分泌代谢科举办国家级代谢性骨病</a></li>
+						</ul>
+					</div>
+					<div class="center_news center_right">
+						<span>公告</span>
+						<a class="more" href="#">更多</a>
+						<ul>
+							<li><a href="#">院内采购谈判结果公示（2018-57号）</a></li>
+							<li><a href="#">关于全面取消医用耗材加成并调整医疗服务价</a></li>
+							<li><a href="#">病床五件套采购信息公告</a></li>
+							<li><a href="#">2019年工会会员春节慰问品采购采购信息公告</a></li>
+							<li><a href="#">医用耗材采购信息公告(2018-85)</a></li>
+							<li><a href="#">肌腱防粘连膜医用耗材采购信息公告(2018-84)</a></li>
+							<li><a href="#">透析器采购信息公告(2018-83)（三次公告)</a></li>
+						</ul>
+					</div>
+			</div>
+			<div class="bottom clear">
+					<span>科室导航</span>
+					<div class="bottom_left">
+						<div class="dept">
+							<div class="dept_left">
+								<h3><a href="">骨科医学部</a></h3>
+							</div>
+							<div class="dept_right">
+								<ul>
+									<li><a href="#">脊柱外科</a></li>
+									<li><a href="#">脊柱一区</a></li>
+									<li><a href="#">脊柱二区</a></li>
+									<li><a href="#">创伤骨科</a></li>
+									<li><a href="#">足踝外科</a></li>
+									<li><a href="#">骨肿瘤科</a></li>
+									<li><a href="#">关节外科</a></li>
+									<li><a href="#">肩肘外科</a></li>
+									<li><a href="#">儿童骨科</a></li>
+									<li><a href="#">中医骨伤科</a></li>
+								</ul>
+							</div>	
+						</div>
+						
+						<div class="dept">
+							<div class="dept_left">
+								<h3><a href="">外科</a></h3>
+							</div>
+							<div class="dept_right">
+								<ul>
+									<li><a href="#">普通外科</a></li>
+									<li><a href="#">胸外科</a></li>
+									<li><a href="#">血管外科</a></li>
+									<li><a href="#">泌尿外科</a></li>
+									<li><a href="#">神经外科</a></li>
+								</ul>
+							</div>	
+						</div>
+						
+						<div class="dept">
+							<div class="dept_left">
+								<h3><a href="">内科</a></h3>
+							</div>
+							<div class="dept_right">
+								<ul>
+									<li><a href="#">心血管内科</a></li>
+									<li><a href="#">风湿免疫科</a></li>
+									<li><a href="#">消化内科</a></li>
+									<li><a href="#">呼吸内科</a></li>
+									<li><a href="#">肾病内科</a></li>
+									<li><a href="#">内分泌代谢科</a></li>
+									<li><a href="#">血液内科</a></li>
+									<li><a href="#">肿瘤内科</a></li>
+									<li><a href="#">神经内科</a></li>
+								</ul>
+							</div>	
+						</div>
+						
+						<div class="dept">
+							<div class="dept_left">
+								<h3><a href="">专科</a></h3>
+							</div>
+							<div class="dept_right">
+								<ul>
+									<li><a href="#">感染科</a></li>
+									<li><a href="#">妇产科</a></li>
+									<li><a href="#">儿科</a></li>
+									<li><a href="#">耳鼻咽喉科</a></li>
+									<li><a href="#">眼科</a></li>
+									<li><a href="#">口腔科</a></li>
+									<li><a href="#">皮肤性病科</a></li>
+									<li><a href="#">康复医学科</a></li>
+									<li><a href="#">急诊医学科</a></li>
+									<li><a href="#">ICU</a></li>
+									<li><a href="#">麻醉科</a></li>
+									<li><a href="#">输血科</a></li>
+									<li><a href="#">中医科</a></li>
+									<li><a href="#">创伤救治中心</a></li>
+								</ul>
+							</div>	
+						</div>
+						
+						<div class="dept">
+							<div class="dept_left">
+								<h3><a href="">其他科室</a></h3>
+							</div>
+							<div class="dept_right">
+								<ul>
+									<li><a href="#">药学部</a></li>
+									<li><a href="#">医学影像科</a></li>
+									<li><a href="#">超声诊断科</a></li>
+									<li><a href="#">医学检验科</a></li>
+									<li><a href="#">病理科</a></li>
+									<li><a href="#">临床营养科</a></li>
+									<li><a href="#">第二门诊部</a></li>
+									<li><a href="#">体检中心</a></li>
+									<li><a href="#">医学实验研究中心</a></li>
+								</ul>
+							</div>	
+						</div>
+					</div>
+				<div class="bottom_right">
+					<div class="centent_login">
+						<ul class="login_list">
+							<li>
+								<span>你的健康,是我们的责任</span>
+							</li>
+							<li>
+								<p>预约挂号,请先注册</p>
+							</li>
+							<li>
+								<input type="submit" name="" class="regedit"  value="立即注册" />
+							</li>
+							<li>
+								<strong>已有账号?<a href="/hospital/manager/Emp_login.jsp">&nbsp;登录</a></strong>
+							</li>
+							<li>
+								<em class="qq"><a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&display=default&client_id=100287346&redirect_uri=https%3A%2F%2Flogin.qyer.com%2Fauth.php%3Faction%3Dqqcb&ismobile=0&state=PASSPORT00005bb077108920c">QQ</a></em>
+								<em class="sina"><a href="https://api.weibo.com/oauth2/authorize?client_id=1118290340&redirect_uri=http%3A%2F%2Flogin.qyer.com%2Flogin.php%3Faction%3Dweibo&response_type=code&refer=www.qyer.com&state=PASSPORT00005bb07728ca27c&display=default&ismobile=0&with_offical_account=1">新浪微博</a></em>
+								<em class="WeChat"><a href="weixin_login.html">微信</a></em>
+							</li>
+						</ul>
+					</div>
+						<a href="#"><img src="img/contert/right_2.jpg"/></a>
+						<a href="#"><img src="img/contert/right_3.jpg"/></a>
+				</div>
+		</div>
+		</div>
+		<!--底部-->
+		<div id="footer">
+			<div class="footer_contact">
+				<ul>
+					<strong>|&nbsp;&nbsp;<span>关于我们</span></strong>
+					<li>
+						<a href="#">医院简介</a>
+					</li>
+					<li>
+						<a href="#">联系我们</a>
+					</li>
+					<li>
+						<a href="#">招聘职位</a>
+					</li>
+				</ul>
+				<ul>
+					<strong>|&nbsp;&nbsp;<span>合作伙伴</span></strong>
+					<li>
+						<a href="#">西京医院</a>
+					</li>
+					<li>
+						<a href="#">西安交大附属二院</a>
+					</li>
+					<li>
+						<a href="#">第四医院</a>
+					</li>
+					<li>
+						<a href="#">唐都医院</a>
+					</li>
+				</ul>
+				<ul>
+					<strong>|&nbsp;&nbsp;<span>网站条款</span></strong>
+					<li>
+						<a href="#">会员条款</a>
+					</li>
+					<li>
+						<a href="#">社区指南</a>
+					</li>
+					<li>
+						<a href="#">版权声明</a>
+					</li>
+					<li>
+						<a href="#">免责声明</a>
+					</li>
+				</ul>
+				<ul>
+					<strong>|&nbsp;&nbsp;<span>帮助中心</span></strong>
+					<li>
+						<a href="#">使用帮助</a>
+					</li>
+					<li>
+						<a href="#">网站地图</a>
+					</li>
+					<li>
+						<a href="#">就医指南</a>
+					</li>
+				</ul>
+				<div class="footer_statement">
+					<a href="index.html"><img src="img/logo/footer.png"/></a>
+					<p>2004-2018 © 北大医院® beida.com All rights reserved. Version v5.57
+						<a href="#"> 京ICP备12003524号</a> 京公网安备11010102001935  京ICP证140673号 
+						<a href="#">营业执照 </a>
+						<a href="#"> 经营许可证 </a>
+						<br />
+						<a href="#">我院</a>为<a href="#">患者</a>提供就医平台<a href="#">就医指南</a><a href="#">护工服务</a>和<a href="#">一站式缴费</a>、<a href="#">便民服务台</a>和<a href="#">问答</a>交流平台，并提供<a href="#">医保</a>、
+						<a href="#">社保</a>、<a href="#">农村合作医疗</a>、<a href="#">城镇医保卡</a>等。
+					</p>		
+				</div>		
+			</div>
+		</div>
+	</body>
+</html>
