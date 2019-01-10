@@ -1,0 +1,263 @@
+/*default*/
+body,h1,h2,h3,h4,h5,h6,p,span,strong,ul,li,ol{
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+li{
+	list-style: none;
+}
+img{
+	vertical-align: top;
+	border: none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+.clear{clear:both;}
+/*end default*/
+
+/*head*/
+.head{
+	width:100%;
+	margin: 0 auto;
+}
+.head_top{
+	width:960px;
+	height: 110px;
+	margin: 0 auto;
+}
+.head_top h1{
+	display: inline;
+}
+.head_top h1 img{
+	width: 380px;
+	height: 120px;
+	background: red;
+}
+.head_top_search{
+	float: right;
+	width: 261px;
+	height: 60px;
+	margin-top: 40px;
+}
+.text{
+	width: 200px;
+	height: 26px;
+	border: none;
+	background: #eee;
+	text-indent: 1em;
+	color: #999999;
+	position: relative;
+}
+.btn{
+	position: absolute;
+	
+	width: 60px;
+	height: 28px;
+	border: none;
+	background: #6dd1e0;
+	color: #fff;	
+}
+.head_top_search span{
+	font-size: 16px;
+	color: #6dd1e0
+}
+.head_top_search a{
+	font-size: 16px;
+	color: #999;
+}
+.head_top_search a:hover{
+	color: #6dd1e0
+}
+
+/*nav*/
+.header_nav{
+	width: 100%;
+	background: #0aa6bd;
+	margin-top: 10px;
+	
+}
+
+.header_nav .nav_F{
+	height: 50px;
+	width: 960px;
+	margin: 0 auto;
+}
+.nav_F li{
+	width: 90px;
+	float: left;
+	font-size:18px;
+	font-weight: normal;
+	text-align: center;
+	line-height: 50px;
+	margin-right: 14px;
+}
+.nav_F li a{
+	color: #fff; 
+}
+.nav_F li:hover ul{
+	display: block;
+}
+.nav_F li a:hover{
+	color: lightskyblue	
+}
+.nav_F li ul{	
+	display: none;
+}
+.nav_F li ul li{
+	background: rgba(255,255,255,0.9);
+	width: 95px;
+	height: 40px;
+	font-size: 14px;
+	text-align:  center;
+	line-height: 40px;
+	padding-left: 2px;
+	border-bottom: 1px solid rgba(96,96,96,0.5);
+	margin-top: 1px;
+	border-radius: 5px;
+}
+.nav_F li ul li:hover{
+	background: rgba(241,241,241);
+}
+.nav_F li ul li a{
+	color: #000;
+}
+/*end nav*/
+/*头部图片*/
+.head_img{
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 320px;
+	background: red;
+}
+ .head_bg{
+	height: 320px;
+}
+.head_img ul{
+	width: 300px;
+	height: 30px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.head_img ul li{
+	float: left;
+	width: 36px;
+	height: 15;
+	margin-right: 6px;
+	height: 12px;
+	background: #0da5bc;
+}
+.head_img ul li:hover{
+	background: orange;
+}
+/*end 头部图片*/
+/*end head*/
+/*内容区域*/
+.contert{
+	width:960px;
+	
+	margin: 330px auto  0;
+}
+.contert p{
+	width: 960px;
+	font-weight: bold;
+	font-size: 16px;
+	border-bottom: 1px solid gainsboro;
+	padding: 8px 0;
+}
+.contert_query{
+	width: 500px;
+	height: 200px;
+	background: gainsboro;
+	text-align: center;
+	line-height: 200px;
+	margin: 20px auto;
+	position: relative;
+}
+.contert_query:hover{
+	background:  #0da5bc;
+	
+}
+.contert_query img{
+	width: 100px;
+	height: 100px;
+	margin: 50px 20px 0 0 ;
+}
+.contert_query strong{	
+	color: #6dd1e0;
+	font-size: 16px;
+	display: block;
+	background: url(../img/query/query.jpg) 30px 50px no-repeat ;
+	
+}
+.contert_query span{
+	color: #000;
+	font-size: 13px;
+	position: absolute;
+	top: 20px;
+	left: 200px;
+	width: 200px;
+	height: 30px;
+	z-index: 20;
+}
+/*footer*/
+#footer{
+	width: 100%;
+	background: #000;
+	clear: both;
+	height: 300px;
+	border-top:6px solid green;
+}
+#footer .footer_contact{
+	width: 960px;
+	margin: 0 auto;
+}
+.footer_contact ul{
+	float: left;
+	margin: 30px 60px 0 0;
+}
+.footer_contact ul strong{
+	font-size: 14px;
+	color: greenyellow;
+}
+.footer_contact ul strong span{
+	color: #ccc;
+}
+.footer_contact ul li{
+	font-size: 14px;
+	text-indent:7px;
+	padding:8px;
+}
+.footer_contact ul li a,.footer_statement p a{
+	color:rgba(255,255,255,0.6)
+}
+.footer_contact ul li a:hover,.footer_statement p a:hover{
+	color:rgba(255,255,255,0.8)
+}
+
+.footer_statement{
+	width: 960px;
+	clear: both;
+	padding-top: 30px;
+}
+.footer_statement img{
+	width: 50px;
+	height: 48px;
+	float: left;
+	margin-right: 5px;
+}
+.footer_statement p {
+	font-size: 12px;
+	line-height: 20px;
+	height: 30px;
+	color:rgba(255,255,255,0.6)
+}
+/*end footer*/
+
+/*centent_login*/

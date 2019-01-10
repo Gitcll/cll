@@ -1,0 +1,290 @@
+/*default*/
+body,h1,h2,h3,h4,h5,h6,p,span,strong,ul,li,ol{
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-size: 12px;
+	font-family: "微软雅黑";
+	background: #f1f1f1;
+}
+li{
+	list-style: none;
+}
+img{
+	vertical-align: top;
+	border: none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+.clear{clear:both;}
+/*end default*/
+
+/*头部区域*/
+.head{
+	width: 100%;
+	height: 80px;
+	background: #3dafa7;
+	position: relative;
+}
+.head img{
+	margin: 10px 0 0 470px;
+	width: 297px;
+	height: 62px;
+}
+.head ul{
+	position: absolute;
+	top:0;
+	right: 465px;
+	width: 465px;
+}
+.head ul li {
+	width: 150px;
+	height: 80px;
+	float: left;
+	background: #238f87;
+	margin-right: 5px;
+	text-align: center;
+}
+
+.head ul li a{
+	color: #FFFFFF;
+	
+	line-height: 80px;
+	font-size: 18px;
+}
+
+
+/*中间区域*/
+/*注册登陆*/
+.contert{
+	width: 960px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+.contert_left{
+	background: #FFFFFF;
+	width: 310px;
+	float: left;
+}
+.centent_login{
+	width:300px;
+	margin: 5px 5px 0 ;
+	margin-left: 5px;
+}
+.login_logo img{
+	width: 30px;
+}
+.login_list{
+	width: ;
+	background: #CCCCCC;
+	height: 250px;
+}
+.login_list li{
+	width:310px;
+}
+.login_list li span,.login_list li p,.login_list li strong,.login_list li em{
+	height: 50px;
+	font-size: 13px;
+	text-align: center;
+	line-height: 50px;
+}
+.login_list li span{
+	color: #000;
+	display: block;
+	font-weight: bold;
+}
+.login_list li p{
+	color: #ccc;
+}
+.login_list li .regedit{
+	width:180px;
+	height: 40px;
+	margin-left: 70px;
+	background:green;
+	border:none;
+	border-radius:5px;
+	color: #fff;
+	font-size:15px;
+	font-weight:bold;
+}
+.login_list li .regedit:hover{
+	cursor:pointer;
+}
+.login_list li strong{
+	display: block;
+}
+.login_list li strong a{
+	color:green;
+}
+.login_list li strong a:hover,.login_list li em a:hover{
+	text-decoration:underline;
+}
+.login_list li em{
+	font-style:normal;
+	font-size: 16px;
+	padding: 2px;
+}
+.login_list li em a{
+	color: green;
+}
+.login_list li .qq{
+	margin-left: 85px;
+}
+
+/*内容区域简介*/
+.contert_bottom{
+	width: 310px;
+	height: 1824px;
+	
+}
+.contert_bottom h3{
+	margin: 10px 0 0 5px;
+	background: url(../img/reserve/icon_hos.jpg) left no-repeat;
+	text-indent: 2em;
+	color: #3dafa7;
+	font-size: 18px;
+}
+.contert_bottom img{
+	width: 290px;
+	height: 200px;
+	margin: 10px 10px;
+}
+.contert_bottom ul{
+	width: 290px;
+	font-size: 14px;
+	margin-left: 10px;
+}
+.contert_bottom ul li{
+	line-height: 30px;
+	
+}
+.contert_bottom ul li span{
+	display: block;
+	background: url(../img/reserve/flag.jpg) left no-repeat;
+	text-indent: 2em;
+}
+.contert_bottom ul li em{
+	font-style: normal;
+	display: block;
+	background: url(../img/reserve/telephone.jpg) left no-repeat;
+	text-indent: 2em;
+}
+.contert_bottom ul li p{
+	background: url(../img/reserve/flag.jpg) left no-repeat;
+	text-indent: 2em;
+}
+.contert_bottom ul li strong{
+	display: block;
+	font-weight: normal;
+	background: url(../img/reserve/location.jpg) left no-repeat;
+	text-indent: 2em;
+}
+/*---------------内容的右边-----------------*/
+.contert_right{
+	width: 630px;
+	margin-left: 20px;
+	background: #FFFFFF;
+	float: left;
+}
+.selected{
+	border-bottom: 1px solid #CCCCCC;
+	width: 600px;
+	margin: 20px auto 0;
+	margin: ;
+}
+.selected h4{
+	font-size: 18px;
+	color: #837066;
+	border-bottom: 4px solid #3dafa7;
+	display: inline;
+	margin-left: 10px;
+	margin-top: -10px;
+}
+/*------------------搜索框----------------*/
+.contert_right form{
+	margin: 20px 0 0 10px;
+}
+.text{
+	width: 200px;
+	height: 26px;
+	border: none;
+	background: #eee;
+	text-indent: 1em;
+	color: #999999;
+	position: relative;
+	line-height: 26px;
+	
+}
+.btn{
+	position: absolute;
+	
+	width: 60px;
+	height: 28px;
+	border: none;
+	background: #6dd1e0;
+	color: #fff;	
+}
+.head_top_search span{
+	font-size: 16px;
+	color: #6dd1e0
+}
+.head_top_search a{
+	font-size: 16px;
+	color: #999;
+}
+
+/*------------------科室列表----------------*/
+.dept{
+	width: 640px;
+	height: 100px;
+	margin: 10px 10px;	
+}
+.dept_left{
+	width: 110px;
+	height: 100px;
+	background: #73cbd7;
+	float: left;
+	text-align: center;
+	line-height: 100px;
+}
+
+.dept_left a{
+	font-size: 26px;
+	color: #FFFFFF;
+}
+.dept_right{
+	float: left;
+	width: 500px;
+	height: 100px;
+	background: #CCCCCC;
+}
+.dept_right ul{
+	width: 520px;
+	padding-left: 8px;
+	margin-top: 10px;
+}
+.dept_right ul li{
+	float: left;
+	line-height: 40px;
+	color: #000000;
+	font-size: 14px;
+	margin-right: 20px;
+}
+.dept_right ul li a:hover{
+	color: #73cbd7;
+}
+.bottom_right{
+	width: 180px;
+	height: 130px;
+	position: absolute;
+	top: 24px;
+	right: 136px;
+}
+.bottom_right img{
+	width: 310px;
+	height: 130px;
+}
+/*end centent_login*/

@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reserve_doc.css"/>
+		<link rel="icon" href="img/logo/logo64.ico""/>
+	</head>
+	<body>
+		<div class="head">
+			<h1><a href=""><img src="img/reserve/logo.png"/></a></h1>
+			
+			<ul>
+				<li><a href="index.html">医院首页</a></li>
+				<li><a href="#">预约挂号</a></li>
+				<li><a href="#">预约指南</a></li>
+			</ul>
+		</div>
+		<div class="contert">
+			<div class="contert_top">
+				<strong>王慧萍</strong>
+				<span>副主任医师</span>
+				(<span>新生儿门诊</span>)<br />
+				<img src="img/query/img1.gif"/>
+				性别 : <em>未知</em>
+				专长 : <em>暂无数据</em>
+				简介 : <em>暂无数据</em>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+package com.chinasoft.service.impl;
+
+import java.util.List;
+
+import com.chinasoft.entity.Emp;
+import com.chinasoft.service.IEmpService;
+
+public class EmpSericeImpl implements IEmpService {
+
+	@Override
+	public int getTotalCount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<Emp> queryEmpByPage(int currentPage, int pageSize) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

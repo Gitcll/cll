@@ -1,0 +1,11 @@
+package com.chinasoft.service;
+
+import java.util.List;
+
+import com.chinasoft.entity.Emp;
+
+public interface IEmpService {
+
+	public int getTotalCount();
+	public List<Emp> queryEmpByPage(int currentPage, int pageSize);
+}

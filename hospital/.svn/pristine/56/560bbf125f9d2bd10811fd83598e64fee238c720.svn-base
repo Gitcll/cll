@@ -1,0 +1,341 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'reserve.jsp' starting page</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+	<link rel="stylesheet" type="text/css" href="client/css/reserve.css"/>
+	<link rel="icon" href="client/img/logo/logo64.ico""/>
+  </head>
+  
+  <body>
+    <div class="head">
+			<h1><a href=""><img src="client/img/reserve/logo.png"/></a></h1>
+			
+			<ul>
+<<<<<<< .mine
+				<li><a href="client/index.jsp">医院首页</a></li>
+||||||| .r949
+				<li><a href="index.jsp">医院首页</a></li>
+=======
+				<li><a href="index.html">医院首页</a></li>
+>>>>>>> .r1222
+				<li><a href="#">预约挂号</a></li>
+				<li><a href="#">预约指南</a></li>
+			</ul>
+		</div>
+		<div class="contert clear">
+			<div class="contert_left">
+<<<<<<< .mine
+				
+||||||| .r949
+				<div class="centent_login">
+						<ul class="login_list">
+							<li>
+								<span>你的健康,是我们的责任</span>
+							</li>
+							<li>
+								<p>预约挂号,请先注册</p>
+							</li>
+							<li>
+								<input type="submit" name="" class="regedit"  value="立即注册" />
+							</li>
+							<li>
+								<strong>已有账号?<a href="login.jsp">&nbsp;登录</a></strong>
+							</li>
+							<li>
+								<em class="qq"><a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&display=default&client_id=100287346&redirect_uri=https%3A%2F%2Flogin.qyer.com%2Fauth.php%3Faction%3Dqqcb&ismobile=0&state=PASSPORT00005bb077108920c">QQ</a></em>
+								<em class="sina"><a href="https://api.weibo.com/oauth2/authorize?client_id=1118290340&redirect_uri=http%3A%2F%2Flogin.qyer.com%2Flogin.php%3Faction%3Dweibo&response_type=code&refer=www.qyer.com&state=PASSPORT00005bb07728ca27c&display=default&ismobile=0&with_offical_account=1">新浪微博</a></em>
+								<em class="WeChat"><a href="weixin_login.html">微信</a></em>
+							</li>
+						</ul>
+				</div>
+=======
+				<div class="centent_login">
+						<ul class="login_list">
+							<li>
+								<span>你的健康,是我们的责任</span>
+							</li>
+							<li>
+								<p>预约挂号,请先注册</p>
+							</li>
+							<li>
+								<input type="submit" name="" class="regedit"  value="立即注册" />
+							</li>
+							<li>
+								<strong>已有账号?<a href="login.html">&nbsp;登录</a></strong>
+							</li>
+							<li>
+								<em class="qq"><a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&display=default&client_id=100287346&redirect_uri=https%3A%2F%2Flogin.qyer.com%2Fauth.php%3Faction%3Dqqcb&ismobile=0&state=PASSPORT00005bb077108920c">QQ</a></em>
+								<em class="sina"><a href="https://api.weibo.com/oauth2/authorize?client_id=1118290340&redirect_uri=http%3A%2F%2Flogin.qyer.com%2Flogin.php%3Faction%3Dweibo&response_type=code&refer=www.qyer.com&state=PASSPORT00005bb07728ca27c&display=default&ismobile=0&with_offical_account=1">新浪微博</a></em>
+								<em class="WeChat"><a href="weixin_login.html">微信</a></em>
+							</li>
+						</ul>
+				</div>
+>>>>>>> .r1222
+				<div class="contert_bottom">
+					<h3>北方医科大学第三附属医院</h3>
+					<img src="client/img/reserve/hospital.jpg"/>
+					<ul>
+						<li><span>等级：三级甲等</span></li>
+						<li><em>电话：020-62784240/62784256</em></li>
+						<li><p>地址：陕西省西安市省体育场高速大厦</p></li>
+						<li><strong>预约时间：00:01~23:59</strong></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="contert_right">
+				<div class="selected">
+					<h4>科室选择</h4>
+				</div>
+				<form action="#" method="post">
+						<input type="text" class="text" placeholder="请输入医生的名字" />
+						<input type="button" class="btn" value="搜索"/>
+				</form>
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">骨科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">创伤骨科</a></li>
+							<li><a href="#">儿童骨科</a></li>
+							<li><a href="#">骨肿瘤科</a></li>
+							<li><a href="#">关节外科</a></li>
+							<li><a href="#">脊柱外科(成人、儿童)</a></li>
+							<li><a href="#">综合骨科</a></li>
+							<li><a href="#">足踝外科</a></li>
+							<li><a href="#">关节外科特诊</a></li>
+							<li><a href="#">肩肘外科</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">外科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">泌尿外科</a></li>
+							<li><a href="#">普通外科(甲乳、胃肠、肝胆)</a></li>
+							<li><a href="#">普通外科(血管、甲乳、胃肠、肝胆)</a></li>
+							<li><a href="#">神经外科</a></li>
+							<li><a href="#">胸外科</a></li>
+							<li><a href="#">血管外科</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">内科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">呼吸内科</a></li>
+							<li><a href="#">内分泌科</a></li>
+							<li><a href="#">神经内科</a></li>
+							<li><a href="#">肾病内科</a></li>
+							<li><a href="#">消化内科(肝胆胰)</a></li>
+							<li><a href="#">心血管内科</a></li>
+							<li><a href="#">风湿免疫科</a></li>
+							<li><a href="#">血液内科</a></li>
+							<li><a href="#">糖尿病足及难愈性伤口门诊</a></li>
+							
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">儿科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">儿科</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">妇产科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">妇产科</a></li>
+							<li><a href="#">产科</a></li>
+							<li><a href="#">妇科</a></li>
+							<li><a href="#">妇科肿瘤宫颈病变</a></li>
+							<li><a href="#">生殖医学中心</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">急诊科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">急诊科</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">康复科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">康复科</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">皮肤科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">皮肤科</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">心理科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">心理科</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">中医科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">中医科</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">肿瘤科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">肿瘤科</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">营养科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">营养科</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">感染科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">感染科</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">超声医学科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">超声医学科</a></li>
+							<li><a href="#">妇产科超声室</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">疼痛科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">疼痛门诊</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">眼科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">眼科</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">口腔科</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">口腔科</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				<div class="dept">
+					<div class="dept_left">
+						<h3><a href="">耳鼻咽喉</a></h3>
+					</div>
+					<div class="dept_right">
+						<ul>
+							<li><a href="#">耳鼻咽喉科</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				
+			</div>
+		</div>
+  </body>
+</html>

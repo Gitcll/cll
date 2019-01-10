@@ -1,0 +1,494 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'doctor_login.jsp' starting page</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+	<script src="/hospital/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		  <style type="text/css">
+        	*{
+        		margin: 0;
+        		padding: 0;
+        	}
+        	li{
+        		list-style: none;
+        	}
+        	.head{
+        		width: 100%;
+        		height: 80px;
+        		background: ghostwhite;
+        		margin: 0 auto;
+        		
+        	}
+        	.head h1{
+        		height: 50px;
+        		font-size: 30px;
+        		margin-left:290px;
+        		color: teal;
+        		padding: 5px;
+        		line-height: 50px;
+        	}
+        	.head_bottom{
+        		width: 100%;
+        		height: 40px;
+        		background: yellowgreen;
+        		line-height: 40px;
+        		
+        	}
+        	.head_bottom strong{
+        		height: 40px;
+        		display: block;
+        		margin-left: 290px;
+        		background: url(img/3.bmp) left no-repeat;
+        		/* text-indent: 150px; */
+        		font-size: 16px;
+        		float: left;
+        		color: antiquewhite;
+        		
+        	}
+        	.head_bottom strong:hover{
+        		color: ghostwhite;
+        	}
+        	.content{
+        		position:absolute;
+        		left:290px;
+        		top:130px;
+        		
+        		width: 960px;
+        		margin: 20px auto;
+        		
+        	}
+        	.content_left{
+        		background: tan;
+        		width: 150px;
+        		height: 800px;
+        		float: left;
+        		
+        	}
+        	
+        	.content_left ul{
+        		margin-top: 10px;
+        		width: 100px;
+        		height: 100px;
+        		margin-bottom：10px；
+        		
+        	}
+        	.content_left ul span{
+        		margin-left: 20px;
+        		margin-bottom：10px；
+        	}
+        	.content_left ul li{
+        		text-align: center;
+        		margin-left: 30px;
+        	}
+        
+        	a{
+        		text-decoration: none;
+        		
+        	}
+        	a:hover{
+        		color: gainsboro;
+        	}	
+        	.content_right{
+        		border: 1px solid aquamarine;
+        		width: 808px;
+        		height: 800px;
+        		float: left;
+        	}
+        	.frame_img{
+        		width:808px;
+        		height:800px;
+        		background: url(manager/img/hushi1.jpg) no-repeat;		
+        	}
+        	
+        	
+		        		/*nav*/
+		.header_nav{
+			width: 100%;
+			background: #0aa6bd;
+			margin-top: 20px;
+			position:relative;
+			z-index:10;
+		}
+		
+		.header_nav .nav_F{
+			height: 50px;
+			width: 960px;
+			margin: 0 auto;
+		}
+		.nav_F li{
+			width: 90px;
+			float: left;
+			font-size:18px;
+			font-weight: normal;
+			text-align: center;
+			line-height: 50px;
+			margin-right: 14px;
+		}
+		.nav_F li a{
+			color: #fff; 
+		}
+		.nav_F li:hover ul{
+			display: block;
+		}
+		.nav_F li a:hover{
+			color: lightskyblue	
+		}
+		.nav_F li ul{	
+			display: none;
+		}
+		.nav_F li ul li{
+			background: rgba(255,255,255,0.9);
+			width: 95px;
+			height: 40px;
+			font-size: 14px;
+			text-align:  center;
+			line-height: 40px;
+			padding-left: 2px;
+			border-bottom: 1px solid rgba(96,96,96,0.5);
+			margin-top: 1px;
+			border-radius: 5px;
+		}
+		.nav_F li ul li:hover{
+			background: rgba(241,241,241);
+		}
+		.nav_F li ul li a{
+			color: #000;
+		}
+		/*end nav*/
+       	
+				#header {
+					width:100%;
+					height:100%;
+					background: #87CEFA;
+					overflow: hidden;
+					-webkit-font-smoothing: antialiased;
+					-webkit-text-size-adjust: 100%;
+					z-index: -1;
+					position:absolute;
+				}
+			
+				
+				body {
+				background: #87CEFA;
+				overflow: hidden;
+				font: normal 16px/1.5 Helvetica, "Microsoft Yahei", Arial, sans-serif;
+				color: #444;
+				-webkit-font-smoothing: antialiased;
+				/* Fix for webkit rendering */
+				-webkit-text-size-adjust: 100%;
+			}
+				#clouds {
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+				}
+				
+				[class^="cloud-"] {
+					position: absolute;
+					right: 120%;
+					width: 200px;
+					height: 60px;
+					background: white;
+					-webkit-border-radius: 200px;
+					-moz-border-radius: 200px;
+					border-radius: 200px;
+				}
+				
+				[class^="cloud-"]:before,
+				[class^="cloud-"]:after {
+					content: '';
+					position: absolute;
+					top: -15px;
+					left: 10px;
+					width: 100px;
+					height: 80px;
+					background: #fff;
+					-webkit-border-radius: 100px;
+					border-radius: 100px;
+					-webkit-transform: rotate(30deg);
+					-moz-transform: rotate(30deg);
+					transform: rotate(30deg);
+				}
+				
+				[class^="cloud-"]:after {
+					top: -55px;
+					left: auto;
+					right: 15px;
+					width: 120px;
+					height: 120px;
+				}
+				
+				.cloud-1 {
+					top: 50px;
+					-webkit-animation: moveclouds 30s linear infinite;
+					-moz-animation: moveclouds 30s linear infinite;
+					-o-animation: moveclouds 30s linear infinite;
+					animation: moveclouds 30s linear infinite;
+				}
+				
+				.cloud-2 {
+					top: 100px;
+					opacity: 0.8;
+					-webkit-transform: scale(0.8);
+					-moz-transform: scale(0.8);
+					transform: scale(0.8);
+					-webkit-animation: moveclouds 45s linear infinite;
+					-moz-animation: moveclouds 45s linear infinite;
+					-o-animation: moveclouds 45s linear infinite;
+					animation: moveclouds 45s linear infinite;
+					-webkit-animation-delay: 5s;
+					-moz-animation-delay: 5s;
+					animation-delay: 5s;
+				}
+				
+				.cloud-3 {
+					top: 150px;
+					opacity: 0.6;
+					-webkit-transform: scale(0.6);
+					-moz-transform: scale(0.6);
+					transform: scale(0.6);
+					-webkit-animation: moveclouds 40s linear infinite;
+					-moz-animation: moveclouds 40s linear infinite;
+					-o-animation: moveclouds 40s linear infinite;
+					animation: moveclouds 40s linear infinite;
+				}
+				
+				.cloud-4 {
+					top: 200px;
+					opacity: 0.75;
+					-webkit-transform: scale(0.75);
+					-moz-transform: scale(0.75);
+					transform: scale(0.75);
+					-webkit-animation: moveclouds 26s linear infinite;
+					-moz-animation: moveclouds 26s linear infinite;
+					-o-animation: moveclouds 26s linear infinite;
+					animation: moveclouds 26s linear infinite;
+					-webkit-animation-delay: 8s;
+					-moz-animation-delay: 8s;
+					animation-delay: 8s;
+				}
+					/*云层移动*/
+				
+				@-webkit-keyframes moveclouds {
+					0% {
+						right: -20%;
+					}
+					100% {
+						right: 120%;
+					}
+				}
+				
+				@-moz-keyframes moveclouds {
+					0% {
+						right: -20%;
+					}
+					100% {
+						right: 120%;
+					}
+				}
+				
+				@-o-keyframes moveclouds {
+					0% {
+						right: -20%;
+					}
+					100% {
+						right: 120%;
+					}
+				}
+				
+				
+				
+		.time_ul li {
+			list-style: none;
+			display: inline-block;
+			width: 50px;
+			height: 70px; 
+			position: relative;
+			overflow: hidden;
+		}
+		.time_ul img {
+			border: 0;
+			width: 50px;
+			height: 70px;
+		}
+		.time_ul {
+			margin: 50px auto;
+			width: 400px;
+			font-size: 0;
+		}
+		.time_ul li div {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+        </style>
+       	<script src="/hospital/manager/js/doMove.js"></script>
+	<script>
+		window.onload = function(){
+				var oUl = document.getElementsByClassName('time_ul')[0];
+				aLi = document.getElementsByTagName('li');
+
+			function toTwo(n){
+				return n < 10 ? '0' + n : '' + n
+			}
+
+			function fnTime(){
+				var myTime = new Date(),
+					iHours = myTime.getHours(),
+					iMinutes = myTime.getMinutes(),
+					iSeconds = myTime.getSeconds(),
+					str = toTwo(iHours) + ':' + toTwo(iMinutes) + ':' + toTwo(iSeconds);
+
+				function fnFlip(li, idx){
+					var oDiv = li.getElementsByTagName('div')[0],
+						aImg = li.getElementsByTagName('img');
+
+					if (str.charAt(idx) == ':'){
+						aImg[0].src = 'manager/img/time/colon.JPG';
+						setTimeout(function(){
+							aImg[0].src = 'manager/img/time/colon2.jpg';
+						}, 500)
+					} else {
+						aImg[1].src = '/hospital/manager/img/time/' + str.charAt(idx) + '.JPG';
+						if(aImg[0].src != aImg[1].src) {
+							doMove(oDiv, 'top', 10, -70, function(){
+								aImg[0].src = aImg[1].src;
+								oDiv.style.top = 0 + 'px';
+							})
+						}
+					}
+				}
+
+				for(var i=0; i<aLi.length; i++){
+					fnFlip(aLi[i], i);
+				}
+	
+			}
+
+			setInterval(fnTime, 1000);
+
+		}
+	</script>
+  </head>
+  
+  <body >
+    	<div class="head">
+    		<h1>WEB医院管理系统</h1>
+    		<div class="head_bottom">
+    			<strong name="index_name">${backname}</strong><span>,您好!</span>
+    		</div>
+    	</div>
+    	
+    		<!--头部导航栏-->
+				<div class="header_nav clear">
+					<ul class="nav_F">
+						<li><a href="#">医院首页</a></li>
+						<li><a href="#">医院概括</a>
+							<ul>
+								<li><a href="#">医院介绍</a></li>
+								<li><a href="#">组织架构</a></li>
+								<li><a href="#">医院布局</a></li>
+								<li><a href="#">交通指引</a></li>
+								<li><a href="#">荣誉资质</a></li>
+							</ul>
+						</li>
+						<li><a href="#">新闻公告</a>
+							<ul>
+								<li><a href="#">医院新闻</a></li>
+								<li><a href="#">媒体报道</a></li>
+								<li><a href="#">最新公告</a></li>
+								<li><a href="#">视频报道</a></li>
+							</ul>
+						</li>
+						<li><a href="#">就医指南</a>
+							<ul>
+								<li><a href="#">就医须知</a></li>
+								<li><a href="#">出诊时间</a></li>
+								<li><a href="#">就医流程</a></li>
+								<li><a href="#">义诊讲座</a></li>
+							</ul>
+						</li>
+						<li><a href="#">科室特色</a>
+							<ul>
+								<li><a href="#">骨科</a></li>
+								<li><a href="#">外科</a></li>
+								<li><a href="#">内科</a></li>
+								<li><a href="#">专科</a></li>
+								<li><a href="#">辅诊科室</a></li>
+							</ul>
+						</li>
+						<li><a href="#">科研教学</a>
+							<ul>
+								<li><a href="#">科学研究</a></li>
+								<li><a href="#">研究生教育</a></li>
+								<li><a href="#">继续教育</a></li>
+								<li><a href="#">规范化培训</a></li>
+								
+							</ul>
+						</li>
+						<li><a href="#">党群人事</a>
+							<ul>
+								<li><a href="#">人事信息</a></li>
+								<li><a href="#">招聘公告</a></li>
+								<li><a href="#">党团活动</a></li>
+							</ul>
+						</li>
+						<li><a href="#">联系我们</a>
+							<ul>
+								<li><a  href="/hospital/manager/liuyan.jsp" target="screen">留言板</a></li>
+								<li><a href="#">电话</a></li>
+								<li><a href="#">QQ/微信</a></li>
+							</ul>
+						</li>		
+					</ul>
+				</div>
+    	
+    	
+    	<div class="content">
+    		<div class="content_left">
+    			<ul>
+    				<span>门诊管理</span>
+    				<li><a href="/hospital/fen?ppage=1" target="screen">患者管理</a></li>
+    				<li><a href="/hospital/PageMedicineServlet?page=1" target="screen">药品管理</a></li>
+    				<li><a href="#" target="screen">挂号管理</a></li>
+    				<li><a href="#">处方管理</a></li>
+    				<li><a href="manager/Emp_Allquery.jsp" target="screen">医生管理</a></li>
+    				<li><a href="manager/Emp_upload.jsp" target="screen">文件上传</a></li>
+    				<li><a href="manager/Emp_Ad.jsp" target="screen">最新公告</a></li>
+    			</ul>
+    		</div>
+    		<div class="content_right">
+    			<iframe scrolling="no" class="frame_img" width="800px" height="800px"  frameborder="0" border="0" name="screen">	
+    			</iframe>
+    		</div>
+    	</div>
+    		<!-- 背景云层 -->
+	<div id="header">
+        <div id="clouds">
+            <div class="cloud-1" data-speed="35000"></div>
+            <div class="cloud-2" data-speed="45000" data-delay="15000"></div>
+            <div class="cloud-3" data-speed="40000"></div>
+            <div class="cloud-4" data-speed="38000" data-delay="20000"></div>
+        </div>
+	</div><!-- / #header -->
+  
+  </body>
+</html>

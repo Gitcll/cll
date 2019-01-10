@@ -1,0 +1,25 @@
+package com.chinasoft.dao;
+
+import java.sql.ResultSet;
+import java.util.List;
+
+import com.chinasoft.entity.Patient;
+
+public interface IPatientDao {
+
+	List<Patient> queryPatientByPage(int currentPage,int pageSize);
+	ResultSet queryAllPatient();
+	Patient queryUSerById(int pid);
+	boolean queryByPatientNameAndPatientPwd(String username,String userpwd);
+	
+	boolean addUser(Patient p);
+	boolean delPatientByPid(Patient p);
+	boolean updatePatientByPid(Patient p);
+	boolean isExistBypid(int pid);
+	//通过id查询患者信息
+	public List<Patient> queryPatientById(Patient p);
+	//分页
+	public ResultSet find(int start,int end);
+	//查询总记录数
+	public ResultSet findCount();
+}

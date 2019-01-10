@@ -1,0 +1,64 @@
+			#main{
+				margin: auto;
+				width: 965px;
+				height: 650px;
+				margin-top: 100px;
+				border: 1px solid;
+				background-image: url(../img/background.jpg);
+			}
+			#hong{
+				width: 15px;
+				height: 15px;
+			}
+			#back{
+				width: 15px;
+				height: 15px;
+				position: absolute;
+				margin-top: -50px;
+				margin-left: 940px;
+			}
+			.login{
+				width: 150px;
+				height: 150px;
+				border-bottom: 4px solid silver;
+				border-right: 2px solid silver;	
+			}
+			#manager{
+				float: left;
+				position: relative;			
+			}
+			#doctor{
+				margin-left: 250px;
+			}
+			#center{
+				margin-left: 280px;
+				margin-top: 120px;
+			}
+			.button{
+				margin-left: 30px;
+				height: 30px;
+				width: 90px;
+				color: white;
+				background-color: slategray;
+				border: 1px solid slategray;
+			}
+			#doclogin{
+				z-index: 2;
+				height:380px;
+				width: 450px;
+				background-color: white;
+				margin: 0 auto;
+				margin-top: 50px;
+				text-align: center;
+				padding-top:70px;
+				border: 2px solid #708090;
+				border-radius: 25px;
+			}
+			#docimg{
+				border-top-right-radius: 25px;
+				border-top-left-radius: 25px;
+				width: 450px;
+				height: 250px;
+				margin-top: -70px;
+			}
+			

@@ -1,0 +1,194 @@
+/*default*/
+body,h1,h2,h3,h4,h5,h6,p,span,strong,ul,li,ol,label{
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-size: 12px;
+	font-family: "微软雅黑";
+	background: #f1f1f1;
+}
+li{
+	list-style: none;
+}
+img{
+	vertical-align: top;
+	border: none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+.clear{clear:both;}
+/*end default*/
+
+/*头部区域*/
+.head{
+	width: 100%;
+	height: 80px;
+	background: #3dafa7;
+	position: relative;
+}
+.head img{
+	margin: 10px 0 0 470px;
+	width: 297px;
+	height: 62px;
+}
+.head ul{
+	position: absolute;
+	top:0;
+	right: 465px;
+	width: 465px;
+}
+.head ul li {
+	width: 150px;
+	height: 80px;
+	float: left;
+	background: #238f87;
+	margin-right: 5px;
+	text-align: center;
+}
+
+.head ul li a{
+	color: #FFFFFF;
+	line-height: 80px;
+	font-size: 18px;
+}
+
+/*中间区域*/
+.contert{
+	clear: both;
+	width: 960px;
+	margin: 30px auto;
+}
+.contert_top{
+	width: 960px;
+}
+.contert_top strong{
+	font-size: 20px;
+}
+.contert_top span{
+	font-size: 16px;
+	color: #0AA6BD;
+}
+
+.img_left{
+	float: left;
+}
+.img_left img{
+	width: 200px;
+	height: 260px;
+	margin-top: 20px;
+	display: inline-block;
+}
+.img_right{
+	float: left;
+	margin: 20px 0  0 16px ;
+}
+.img_right label{
+	font-size: 14px;
+	color: #CCCCCC;
+}
+.img_right em{
+	font-size: 14px;
+	font-style: normal;
+	line-height: 50px;
+}
+.img_right a{
+	font-size: 16px;
+	color: #0AA6BD;
+}
+.contert_table{
+	width: 960px;
+	margin: 0 auto;
+	margin-top: 300px;
+	margin-left: 480px;
+}
+.table{
+	width: 800px;
+	height: 200px;
+}
+.table tr td{
+	font-size: 14px;
+	text-align: center;
+	width: 70px;
+	height: 30px;
+}
+
+
+.bottom{
+	width: 960px;
+	margin: 10px auto 50px ;
+	border: 1px solid #CCCCCC;
+	height: 260px;
+}
+.bottom_top{
+	width: 960px;
+	background: #CCCCCC;
+	border: 1px solid #DCDCDC;
+	
+}
+.bottom_top h4{
+	margin-left: 15px;
+	height: 50px;
+	background: url(../img/reserve/doctor_tips.png) left center no-repeat;
+	text-indent: 3em;
+	line-height: 50px;
+	font-size: 16px;
+	font-weight: normal;
+}
+.bottom_contert{
+	width: 960px;
+}
+.bottom_contert ul{
+	width: 960px;
+	background: red;
+	
+}
+.bottom_contert ul li{
+	margin-left: 5px;
+	float: left;
+	margin-top: 8px;
+	margin-right: 5px;
+}
+.bottom_ul{
+	width: 230px;
+	height: 190px;
+	
+}
+.bottom_ul_img{
+	width: 230px;
+	height: 140px;
+	border: 1px solid #CCCCCC;
+	text-align: center;
+}
+.bottom_ul_img img{
+	margin-top: 5px;
+	width: 60px;
+	height: 80px;
+	border-radius: 50%;
+	
+}
+.bottom_ul_img a{
+	font-size: 14px;
+	
+	font-size: 14px;
+	color: cornflowerblue;
+	
+}
+.bottom_ul_img span{
+	color: #CCCCCC;
+	font-size: 14px;
+	
+}
+.bottom_ul_span{
+	background: #CCCCCC;
+	width: 220px;
+	height: 40px;
+	border: 1px solid #CCCCCC;
+	padding: 5px;
+}
+.bottom_ul_span a{
+	font-size: 14px;
+	color: gray;
+}

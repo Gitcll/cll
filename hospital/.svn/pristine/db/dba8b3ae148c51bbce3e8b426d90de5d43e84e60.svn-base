@@ -1,0 +1,142 @@
+package com.chinasoft.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
+
+import com.chinasoft.dao.IPatientDao;
+import com.chinasoft.entity.Patient;
+import com.chinasoft.util.DBUtil;
+
+public class PatientDaoImpl implements IPatientDao{
+
+	Connection conn = DBUtil.getConnection();
+	PreparedStatement pstmt = null;
+	ResultSet rs = null;
+	@Override
+	public List<Patient> queryPatientByPage(int currentPage, int pageSize) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResultSet queryAllPatient() {
+		String sql = "select p_id,username,sex,age,addr,iphone,zhuyuan,g_id,c_id from patient";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			return pstmt.executeQuery();	
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	@Override
+	public Patient queryUSerById(int pid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+/*	@Override
+	public Patient queryByPatientNameAndPatientPwd(String patientname,
+			String patientpwd) {
+		String sql = "select * from patient where userlogin = ?and userpwd = ?";
+		QueryRunner runner = new QueryRunner(DBUtil.getDataSource());
+		
+		
+		try {
+			return runner.query(sql, new BeanHandler<Patient>(Patient.class),patientname,patientpwd);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}*/
+
+	@Override
+	public boolean addUser(Patient p) {
+		try {
+			pstmt = conn.prepareStatement("insert into patient(username,sex,age,addr,iphone) values(?,?,?,?,?)");
+			pstmt.setString(1, p.getPatientName());
+			pstmt.setString(2, p.getPatientSex());
+			pstmt.setInt(3, p.getPatientAge());
+			pstmt.setString(4, p.getPatientAdd());
+			pstmt.setString(5, p.getPatientPhoneNum());
+			int update = pstmt.executeUpdate();
+			if(update <= 0){
+				return false;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return true;
+	}
+
+	@Override
+	public boolean delPatientByPid(Patient p) {
+		try {
+			pstmt = conn.prepareStatement("delete from patient where p_id=?");
+			pstmt.setInt(1, p.getPid());
+			int update = pstmt.executeUpdate();
+			if(update <=0){
+				return false;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return true;
+	}
+
+	@Override
+	public boolean updatePatientByPid(Patient p) {
+		try {
+			pstmt = conn.prepareStatement("update patient set username=?,sex=?,age=?,addr=?,"
+					+ "iphone=?,zhuyuan=?,g_id=?,c_id=? where p_id=?");
+			pstmt.setString(1, p.getPatientName());
+			pstmt.setString(2, p.getPatientSex());
+			pstmt.setInt(3, p.getPatientAge());
+			pstmt.setString(4, p.getPatientAdd());
+			pstmt.setString(5, p.getPatientPhoneNum());
+			pstmt.setString(6, p.getZhuyuan());
+			pstmt.setInt(7, p.getGuahaoId());
+			pstmt.setInt(8, p.getChufagnId());
+			int update = pstmt.executeUpdate();
+			if(update <= 0){
+				return false;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return true;
+	}
+
+	@Override
+	public boolean isExistBypid(int pid) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public ResultSet find(int start, int end) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResultSet findCount() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
